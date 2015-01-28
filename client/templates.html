@@ -1,0 +1,20 @@
+<head>
+    <title>there</title>
+</head>
+
+<template name="layout">
+    {{ > loginButtons }}
+    {{ > yield }}
+</template>
+
+<template name="map">
+    <ul id="Map">
+        {{# each users }}
+            <li id="{{ _id }}" class="{{ profile.status }}" style="background:url({{ gravatar }})"></li>
+        {{/each}}
+    </ul>
+</template>
+
+<template name="loading">
+    loading....
+</template>
